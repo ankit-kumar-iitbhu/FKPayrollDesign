@@ -4,5 +4,5 @@ import SourceCode.models.Receipt;
 
 public interface Commission {
     public void submitReceipt(Receipt receipt);
-    public void makePayement();
+    public void getCommission();
 }

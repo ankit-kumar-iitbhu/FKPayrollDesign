@@ -58,11 +58,11 @@ public class GetEmployeeObject{
 
         System.out.println("Enter montly salary");
         double flatSalary = sc.nextDouble();
-        current.setHourlyRate(flatSalary);
+        current.setFlatSalary(flatSalary);
 
         System.out.println("Enter commssion on sale (in percentage) ");
         double commissionRate = sc.nextDouble();
-        current.setHourlyRate(commissionRate);
+        current.setCommissionRate(commissionRate);
 
 
 

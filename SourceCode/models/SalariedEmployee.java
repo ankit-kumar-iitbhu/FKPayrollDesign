@@ -32,6 +32,22 @@ public class SalariedEmployee extends Employee implements EmployeeInterface,Comm
 
     }
 
+    public double getFlatSalary() {
+        return flatSalary;
+    }
+
+    public void setFlatSalary(double flatSalary) {
+        this.flatSalary = flatSalary;
+    }
+
+    public double getCommissionRate() {
+        return commissionRate;
+    }
+
+    public void setCommissionRate(double commissionRate) {
+        this.commissionRate = commissionRate;
+    }
+
     
 
     

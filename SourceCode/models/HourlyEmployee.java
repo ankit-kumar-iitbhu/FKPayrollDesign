@@ -21,25 +21,35 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
         return wage;
     }
 
+
     @Override
     public void postTimeCard(double noOfHours) {
-        
-        // implementation left
+        this.addToBalance(wage(noOfHours));
+        LocalDate today = LocalDate.now();
+        TimeCard card = new TimeCard().setDate(today).setNoOfHours(noOfHours);
+        timeHistory.add(card);
     }
-
 
 
     @Override
     public void getDailyWage() {
-         
-        //implementation left
-
+        String transactionDetail="Your Daily earning for following days are :- ";
+        double totalEarning=0;
+        for(TimeCard card : timeHistory){
+            double earning=wage(card.getNoOfHours();
+            totalEarning+=earning;
+            String temp="\n  On "+card.getDate()+" your earning "+earning);
+            transactionDetail+=temp;
+        }
+        this.deductFromBalance(totalEarning);
+        (this.timeHistory).clear();
+        System.out.println(transactionDetail);
     }
 
 
     @Override
-    public void setEmployeeType() {
-        this.Type = "HourlyEmployee";
+    public String setEmployeeType() {
+        return "HourlyEmployee";
     }
 
     @Override

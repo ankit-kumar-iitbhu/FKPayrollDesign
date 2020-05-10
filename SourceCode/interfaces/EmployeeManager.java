@@ -5,6 +5,6 @@ import SourceCode.models.Employee;
 public interface EmployeeManager {
     public Employee findEmployee(int pk);
     public void addEmployee(Employee current);
-    public void deleteEmployee();
+    public void deleteEmployee(int pk);
 
 }

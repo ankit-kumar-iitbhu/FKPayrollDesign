@@ -13,8 +13,11 @@ public class InMemoryManager implements EmployeeManager {
 
     @Override
     public Employee findEmployee(int pk) {
-        // TODO Auto-generated method stub
-        return null;
+        if(pk<0&&pk>=employeeList.size()){
+            System.out.println("Employee does not exist ");
+            return null;
+        }
+        else return employeeList.get(pk);
     }
 
     @Override
@@ -24,9 +27,15 @@ public class InMemoryManager implements EmployeeManager {
     }
 
     @Override
-    public void deleteEmployee() {
-        // TODO Auto-generated method stub
-
+    public void deleteEmployee(int pk) {
+        // if employee exist it reference is changed to null
+        Employee temp=findEmployee(pk);
+        if(temp!=null){
+            employeeList.set(pk,null);
+        }
+        else{
+            System.out.println("Employee does not exist ");
+        }
     }
 
 

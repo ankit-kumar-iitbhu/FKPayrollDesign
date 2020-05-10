@@ -59,8 +59,13 @@ public abstract class Employee {
         return payementChoice;
     }
 
-    public void setPayementChoice(PayementChoice payementChoice) {
-        this.payementChoice = payementChoice;
+    public void setPayementChoice(int i) {
+        if(i==0)
+        this.payementChoice =  PayementChoice.MAILED_TO_POSTAL_ADDRESS;
+        if(i==1)
+        this.payementChoice =  PayementChoice.PICKUP_FROM_PAYMASTER;
+        if(i==2)
+        this.payementChoice =  PayementChoice.DEPOSITED_TO_BANK_ACCOUNT;
     }
 
     public double getBalance() {

@@ -8,8 +8,8 @@ public class SalariedEmployee extends Employee implements EmployeeInterface,Comm
     private double flatSalary;
     private double commissionRate;  // in percentage
 
-    public String setEmployeeType(){
-        return "SalariedEmployee";
+    public void setEmployeeType(){
+        this.Type= "SalariedEmployee";
     }
 
     @Override

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 //it will be replaced with persistent alternative
 public class InMemoryManager implements EmployeeManager {
 
-    private ArrayList<? super Employee> employeeList;
+    private ArrayList<Employee> employeeList;
 
 
     @Override
@@ -18,9 +18,9 @@ public class InMemoryManager implements EmployeeManager {
     }
 
     @Override
-    public void addEmployee() {
+    public void addEmployee(Employee temp) {
         // TODO Auto-generated method stub
-
+        employeeList.add(temp);
     }
 
     @Override

@@ -38,8 +38,8 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
 
 
     @Override
-    public String setEmployeeType() {
-        return "HourlyEmployee";
+    public void setEmployeeType() {
+        this.Type = "HourlyEmployee";
     }
 
     @Override
@@ -47,6 +47,14 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
         // TODO Auto-generated method stub
 
     }
+
+	public double getHourlyRate() {
+		return hourlyRate;
+	}
+
+	public void setHourlyRate(double hourlyRate) {
+		this.hourlyRate = hourlyRate;
+	}
 
 
 

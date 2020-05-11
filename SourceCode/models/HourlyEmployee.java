@@ -36,9 +36,9 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
         String transactionDetail="Your Daily earning for following days are :- ";
         double totalEarning=0;
         for(TimeCard card : timeHistory){
-            double earning=wage(card.getNoOfHours();
+            double earning=wage(card.getNoOfHours());
             totalEarning+=earning;
-            String temp="\n  On "+card.getDate()+" your earning "+earning);
+            String temp="\n  On "+card.getDate()+" your earning "+earning;
             transactionDetail+=temp;
         }
         this.deductFromBalance(totalEarning);
@@ -48,8 +48,8 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
 
 
     @Override
-    public String setEmployeeType() {
-        return "HourlyEmployee";
+    public void setEmployeeType() {
+        this.Type= "HourlyEmployee";
     }
 
     @Override

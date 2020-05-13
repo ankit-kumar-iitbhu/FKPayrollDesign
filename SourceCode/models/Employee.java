@@ -8,11 +8,13 @@ public abstract class Employee {
     protected int id;
     protected String name;
     protected boolean union;
+    //true if part of union else false
     protected String Type;
     protected PayementChoice payementChoice;
     protected double balance;
     protected LocalDate lastPaid;
     protected ArrayList<String> transactionHistory;
+    protected double duesUnion;
 
     protected static int employeeNo = 0;
 
@@ -85,6 +87,14 @@ public abstract class Employee {
 
     public void setLastPaid(LocalDate lastPaid) {
         this.lastPaid = lastPaid;
+    }
+
+    public double getDuesUnion() {
+        return duesUnion;
+    }
+
+    public void setDuesUnion(double duesUnion) {
+        this.duesUnion = duesUnion;
     }
 
 }

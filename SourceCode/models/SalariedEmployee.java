@@ -35,7 +35,9 @@ public class SalariedEmployee extends Employee implements EmployeeInterface,Comm
             String temp="\n On "+r.getDate()+", sales ammout= "+r.getAmmount()+", commission ="+earning;
             transactionDetail+=temp;
         }
-        this.deductFromBalance(totalEarning);
+
+        this.addToBalance(totalEarning);
+        
         (this.receiptList).clear();
         System.out.println(transactionDetail);
         System.out.println("total "+totalEarning+" credited to employee"+this.getId());

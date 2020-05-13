@@ -18,5 +18,15 @@ public class Application{
 
         SubmitReceipt.submitReceipt();
 
+        UnionOperation.unionOperation();
+
+        UnionOperation.unionOperation();
+
+        UnionOperation.unionOperation();
+
+        UnionOperation.unionOperation();
+
+        UnionOperation.unionOperation();
+
     }
 }

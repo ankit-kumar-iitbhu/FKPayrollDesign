@@ -47,7 +47,9 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
             String temp="\n  On "+card.getDate()+" your earning "+earning;
             transactionDetail+=temp;
         }
-        this.deductFromBalance(totalEarning);
+
+        this.addToBalance(totalEarning);
+
         (this.timeHistory).clear();
         System.out.println(transactionDetail);
         System.out.println("total "+totalEarning+" credited to employee"+this.getId());

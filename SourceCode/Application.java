@@ -14,19 +14,13 @@ public class Application{
         manager.printAllEmployee();
 
         AddMember.addMember();
+
+        EditEmployeeDetail.editEmployeeDetail();
         manager.printAllEmployee();
-
-        SubmitReceipt.submitReceipt();
-
-        UnionOperation.unionOperation();
-
-        UnionOperation.unionOperation();
-
-        UnionOperation.unionOperation();
-
-        UnionOperation.unionOperation();
-
-        UnionOperation.unionOperation();
+        EditEmployeeDetail.editEmployeeDetail();
+        manager.printAllEmployee();
+        EditEmployeeDetail.editEmployeeDetail();
+        manager.printAllEmployee();
 
     }
 }

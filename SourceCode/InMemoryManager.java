@@ -27,11 +27,11 @@ public class InMemoryManager implements EmployeeManager {
 
     @Override
     public Employee findEmployee(int pk) {
-        if(pk<0&&pk>=employeeList.size()){
+        if(pk<0||pk>=employeeList.size()){
             System.out.println("Employee does not exist ");
             return null;
         }
-        else return employeeList.get(pk);
+        else {return employeeList.get(pk);}
     }
 
     @Override

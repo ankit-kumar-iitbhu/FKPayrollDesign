@@ -18,7 +18,12 @@ public class UnionOperation {
         String temp=sc.nextLine();
         int id=Integer.parseInt(temp);
         Employee emp=empManager.findEmployee(id);
+        if(emp==null){
+            System.out.println("Invalid employee id ");
+        }
+        else{
         unionObj.addMember(emp);
+        }
     }
 
     public static void removeMember(){
@@ -26,7 +31,12 @@ public class UnionOperation {
         String temp=sc.nextLine();
         int id=Integer.parseInt(temp);
         Employee emp=empManager.findEmployee(id);
+        if(emp==null){
+            System.out.println("Invalid employee id ");
+        }
+        else{
         unionObj.removeMember(emp);
+        }
     }
 
 

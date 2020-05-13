@@ -22,6 +22,11 @@ public abstract class Employee {
         employeeNo+=1;
     }
 
+    public String toString(){
+        String description="Id: "+id+" name:- "+name+" type:- "+getType();
+        return description;
+    }
+
     public void addToBalance(double credit){
         this.balance += credit;
     }

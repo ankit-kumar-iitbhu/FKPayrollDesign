@@ -11,6 +11,12 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
     private ArrayList<TimeCard> timeHistory;
     private final static double OVERTIME = 1.5;
     
+    public HourlyEmployee(){
+        super();
+        timeHistory=new ArrayList<TimeCard>();
+    }
+
+
 
 //return wage earned based on number on
     private double wage(double time){
@@ -44,6 +50,7 @@ public class HourlyEmployee extends Employee implements EmployeeInterface,Manage
         this.deductFromBalance(totalEarning);
         (this.timeHistory).clear();
         System.out.println(transactionDetail);
+        System.out.println("total "+totalEarning+" credited to employee"+this.getId());
     }
 
 

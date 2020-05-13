@@ -12,7 +12,8 @@ public class PostTimeCard {
 
     public static void postTimeCard(){
         System.out.println("Enter your Employee ID");
-        int id=sc.nextInt();
+        String inputStr=sc.nextLine();
+        int id=Integer.parseInt(inputStr);
 
         Employee temp = manager.findEmployee(id);
         if(temp==null){
@@ -22,7 +23,8 @@ public class PostTimeCard {
             String type=temp.getType();
             if("HourlyEmployee".equals(type)){
                 HourlyEmployee current=(HourlyEmployee)temp;
-                double noOfHours=sc.nextDouble();
+                inputStr=sc.nextLine();
+                double noOfHours=Double.parseDouble(inputStr);
                 current.postTimeCard(noOfHours);
             }
             else{

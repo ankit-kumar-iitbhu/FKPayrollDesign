@@ -29,12 +29,16 @@ public class GetEmployeeObject{
 
         System.out.println("Payment Choice: ");
         System.out.println("Enter 1 for MAILED_TO_POSTAL_ADDRESS,2 for PICKUP_FROM_PAYMASTER,and 3 forDEPOSITED_TO_BANK_ACCOUNT");
-        int choice = sc.nextInt();
+        temp = sc.nextLine();
+        int choice = Integer.parseInt(temp);
         current.setPayementChoice(choice);
 
         System.out.println("Enter hourly rate ");
-        double hourlyRate = sc.nextDouble();
+        temp = sc.nextLine();
+        double hourlyRate = Double.parseDouble(temp);
         current.setHourlyRate(hourlyRate);
+
+        current.setEmployeeType();
 
         return current;
     }
@@ -57,17 +61,22 @@ public class GetEmployeeObject{
 
         System.out.println("Payment Choice: ");
         System.out.println("Enter 1 for MAILED_TO_POSTAL_ADDRESS,2 for PICKUP_FROM_PAYMASTER,and 3 forDEPOSITED_TO_BANK_ACCOUNT");
-        int choice = sc.nextInt();
+        String chStr=sc.nextLine();
+        int choice = Integer.parseInt(chStr);
         current.setPayementChoice(choice);
 
         System.out.println("Enter montly salary");
-        double flatSalary = sc.nextDouble();
+        String salaryStr=sc.nextLine();
+        double flatSalary = Double.parseDouble(salaryStr);
         current.setFlatSalary(flatSalary);
 
         System.out.println("Enter commssion on sale (in percentage) ");
-        double commissionRate = sc.nextDouble();
+        String commissionStr=sc.nextLine();
+        double commissionRate = Double.parseDouble(commissionStr);
         current.setCommissionRate(commissionRate);
 
+
+        current.setEmployeeType();
 
 
         return current;

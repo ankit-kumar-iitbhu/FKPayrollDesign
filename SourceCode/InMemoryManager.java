@@ -14,6 +14,16 @@ public class InMemoryManager implements EmployeeManager {
         employeeList=new ArrayList<Employee> ();
     }
 
+    @Override
+    public void printAllEmployee() {
+
+        System.out.println("List of all employee :- ");
+        for(Employee emp : employeeList){
+            System.out.println(emp);
+        }
+        System.out.println();
+    }
+
 
     @Override
     public Employee findEmployee(int pk) {

@@ -6,5 +6,6 @@ public interface EmployeeManager {
     public Employee findEmployee(int pk);
     public void addEmployee(Employee current);
     public void deleteEmployee(int pk);
+    public void printAllEmployee();
 
 }

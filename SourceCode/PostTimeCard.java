@@ -2,12 +2,13 @@ package SourceCode;
 
 import java.util.Scanner;
 
+import SourceCode.interfaces.EmployeeManager;
 import SourceCode.models.Employee;
 import SourceCode.models.HourlyEmployee;
 
 public class PostTimeCard {
     static Scanner sc =new Scanner(System.in);
-    static InMemoryManager manager= new InMemoryManager();
+    public static EmployeeManager manager = ManagerFactory.getManagerObject();
 
     public static void postTimeCard(){
         System.out.println("Enter your Employee ID");

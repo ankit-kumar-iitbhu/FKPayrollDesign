@@ -10,6 +10,10 @@ public class InMemoryManager implements EmployeeManager {
 
     private ArrayList<Employee> employeeList;
 
+    public InMemoryManager(){
+        employeeList=new ArrayList<Employee> ();
+    }
+
 
     @Override
     public Employee findEmployee(int pk) {

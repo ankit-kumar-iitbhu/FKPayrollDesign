@@ -16,6 +16,8 @@ public class GetEmployeeObject{
 
         HourlyEmployee current = new HourlyEmployee(); 
 
+        System.out.println("New Hourly Employee to be created :- ");
+
         System.out.println("Enter name ");
         String name = sc.nextLine();
         current.setName(name);
@@ -42,6 +44,8 @@ public class GetEmployeeObject{
 
         SalariedEmployee current = new SalariedEmployee(); 
         
+        System.out.println("New Salaried Employee to be created :- ");
+
         System.out.println("Enter name ");
         String name = sc.nextLine();
         current.setName(name);
@@ -78,17 +82,18 @@ public class GetEmployeeObject{
         System.out.println("Enter 1 for hourly worker and 2 for salaried worker");
         int type=0;
         do{
-            type = sc.nextInt();
-            if(type == 1){
-                return (Employee)getHourlyEmployeeObject();
-            }
-            else if (type==2){
-                return (Employee)getSalariedEmployeeObject();
-            }
+            String temp = sc.nextLine();
+            type= Integer.parseInt(temp);
         }while(type!=1 && type !=2);
 
-    
-        return null;
+        if(type == 1){
+            return (Employee)getHourlyEmployeeObject();
+        }
+        else{
+            return (Employee)getSalariedEmployeeObject();
+        }
+
+
     }
  
 }
